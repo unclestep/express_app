@@ -1,6 +1,6 @@
 services:
   express_app:
-    build: satchel47/express_app:latest
+    image: satchel47/express_app:latest
     container_name: express_app
     ports:
       - 8080:8080
@@ -14,7 +14,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - DOCKER_HOST=unix:///var/run/docker.sock
       - WATCHTOWER_POLL_INTERVAL=60
       - WATCHTOWER_LABEL_ENABLE=true
       - WATCHTOWER_CLEANUP=true
