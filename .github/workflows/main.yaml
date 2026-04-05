@@ -27,3 +27,4 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/express_app:latest
+          platforms: linux/amd64, linux/arm64
